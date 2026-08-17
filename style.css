@@ -1,0 +1,370 @@
+/* =========================================================
+   Alexandra Nicole J. Nucos — Personal Website
+   Design tokens
+   ========================================================= */
+:root {
+  --ink: #1c2541;
+  --body-text: #3a3f4b;
+  --paper: #faf8f3;
+  --card: #ffffff;
+  --line: #dad3c2;
+  --accent: #3e6259;      /* deep teal green */
+  --accent-light: #e5ede9;
+  --highlight: #f2b950;   /* gold highlighter */
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-body: "Inter", -apple-system, sans-serif;
+
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--body-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background-image:
+    radial-gradient(circle, #e3ddcb 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent); }
+
+/* ---------- Header ---------- */
+header.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.title-bar {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 22px 24px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.title-bar .dots { display: flex; gap: 6px; margin-right: 6px; }
+.title-bar .dots span {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block;
+}
+.title-bar .dots span:nth-child(1) { background: #e4634f; }
+.title-bar .dots span:nth-child(2) { background: var(--highlight); }
+.title-bar .dots span:nth-child(3) { background: var(--accent); }
+
+.site-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* Tab navigation, styled like open editor tabs / filenames */
+nav.tabs {
+  max-width: 1080px;
+  margin: 14px auto 0;
+  padding: 0 24px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+nav.tabs button {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 10px 18px;
+  border-radius: 8px 8px 0 0;
+  color: #7d8291;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+nav.tabs button:hover { color: var(--ink); }
+
+nav.tabs button.active {
+  color: var(--ink);
+  background: var(--paper);
+  border-color: var(--line);
+  font-weight: 600;
+}
+
+nav.tabs button .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 8px;
+}
+
+/* ---------- Main layout ---------- */
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+section.page { display: none; animation: fade 0.3s ease; }
+section.page.active { display: block; }
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+h2.section-heading {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  color: var(--ink);
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+/* ---------- Home page ---------- */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.home-intro h1 {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--ink);
+  margin: 0 0 18px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.home-intro p { font-size: 1.02rem; margin: 0 0 22px; }
+
+.goals-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin: 28px 0 12px;
+}
+
+ul.checklist { list-style: none; margin: 0; padding: 0; }
+
+ul.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.96rem;
+}
+
+ul.checklist li:last-child { border-bottom: none; }
+
+ul.checklist li::before {
+  content: "";
+  flex: 0 0 16px;
+  height: 16px;
+  margin-top: 3px;
+  border: 1.5px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* Profile card on the right side of Home */
+.profile-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.profile-card .photo-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--accent-light);
+}
+
+.profile-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.profile-card .data {
+  padding: 18px 20px 22px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+}
+
+.profile-card .data .name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+
+.kv { display: flex; gap: 8px; padding: 4px 0; }
+.kv .k { color: var(--accent); white-space: nowrap; }
+.kv .v { color: var(--body-text); }
+
+/* ---------- Profile page ---------- */
+.about-copy p { max-width: 62ch; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.tags span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+}
+
+.status-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  border-radius: 100px;
+  margin: 4px 0 26px;
+}
+
+.status-line .pulse {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--highlight);
+}
+
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.contact-card .k {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.contact-card .v {
+  color: var(--ink);
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* ---------- Calculator page ---------- */
+.calculator {
+  max-width: 320px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.calc-display {
+  background: var(--ink);
+  color: #fdfaf3;
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  text-align: right;
+  padding: 20px 16px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  min-height: 1.7rem;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.calc-grid button {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  padding: 16px 0;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.calc-grid button:hover { background: var(--accent-light); }
+.calc-grid button:active { transform: scale(0.96); }
+
+.calc-grid button.op { background: var(--accent); color: #fff; border-color: var(--accent); }
+.calc-grid button.op:hover { background: #345249; }
+.calc-grid button.equals { background: var(--highlight); color: var(--ink); border-color: var(--highlight); }
+.calc-grid button.wide { grid-column: span 2; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #7d8291;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .home-grid { grid-template-columns: 1fr; }
+  .home-intro h1 { font-size: 2.1rem; }
+  .profile-card { max-width: 320px; }
+  footer { flex-direction: column; gap: 6px; }
+}
+
+/* ---------- Accessibility ---------- */
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

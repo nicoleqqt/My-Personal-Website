@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Personal Website — Alexandra Nicole J. Nucos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="title-bar">
+    <span class="dots"><span></span><span></span><span></span></span>
+    <h1 class="site-title">My Personal Website</h1>
+  </div>
+  <nav class="tabs">
+    <button class="tab-btn active" data-target="home"><span class="dot"></span>home.html</button>
+    <button class="tab-btn" data-target="profile"><span class="dot"></span>profile.html</button>
+    <button class="tab-btn" data-target="contact"><span class="dot"></span>contact.html</button>
+    <button class="tab-btn" data-target="calculator"><span class="dot"></span>calculator.js</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="home-grid">
+      <div class="home-intro">
+        <p class="eyebrow">Welcome</p>
+        <h1>Hi, I'm Alexandra 👋</h1>
+        <p>I'm a 3rd year college student taking up BSIT, majoring in Web and Mobile Application Development (BSIT‑WMAD), at Isabela State University – Santiago Campus. I'm still a beginner when it comes to coding, but I'm learning something new every day and I'm genuinely enjoying the process of building things for the web.</p>
+        <p>This site is one of my first personal projects — built from scratch to practice what I've been learning, and to have a small corner of the internet that's mine.</p>
+
+        <p class="goals-title">Goals</p>
+        <ul class="checklist">
+          <li>Become a confident, well-rounded web developer</li>
+          <li>Master HTML, CSS, and JavaScript fundamentals</li>
+          <li>Build real projects that solve real problems</li>
+          <li>Graduate with a strong portfolio and a BSIT‑WMAD degree</li>
+          <li>Keep learning — one line of code at a time</li>
+        </ul>
+      </div>
+
+      <aside class="profile-card">
+        <div class="photo-wrap">
+          <img src="alexandra.jpg" alt="Photo of Alexandra Nicole J. Nucos">
+        </div>
+        <div class="data">
+          <p class="name">Alexandra Nicole J. Nucos</p>
+          <div class="kv"><span class="k">age:</span><span class="v">21</span></div>
+          <div class="kv"><span class="k">course:</span><span class="v">BSIT – Web &amp; Mobile App Development</span></div>
+          <div class="kv"><span class="k">institution:</span><span class="v">Isabela State University, Santiago Campus</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile" class="page">
+    <p class="eyebrow">Profile</p>
+    <h2 class="section-heading">About Me</h2>
+
+    <div class="status-line"><span class="pulse"></span> currently learning web development</div>
+
+    <div class="about-copy">
+      <p>I'm Alexandra Nicole J. Nucos, a 3rd year BSIT student majoring in Web and Mobile Application Development at Isabela State University – Santiago Campus. My interest in tech started with curiosity about how websites work behind the scenes, and it's grown into a real goal: becoming a successful developer.</p>
+      <p>I'm still early in my journey — I consider myself a beginner — but I show up, practice, and build small projects like this one to turn what I learn in class into something real. I care about writing clean, understandable code and designing things that are simple and easy to use.</p>
+      <p>Outside of schoolwork, I'm building the habit of learning consistently, exploring new tools, and slowly shaping the kind of developer I want to become.</p>
+
+      <p class="goals-title">Currently learning</p>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Git &amp; GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-heading">Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p class="k">Email</p>
+        <p class="v"><a href="mailto:alexandranucos08@gmail.com">alexandranucos08@gmail.com</a></p>
+      </div>
+      <div class="contact-card">
+        <p class="k">Address</p>
+        <p class="v">Rizal Village, Rizal, Santiago City</p>
+      </div>
+      <div class="contact-card">
+        <p class="k">Phone</p>
+        <p class="v">0977 056 8447</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calculator" class="page">
+    <p class="eyebrow">Mini Project</p>
+    <h2 class="section-heading">Calculator</h2>
+    <div class="calculator">
+      <div class="calc-display" id="calcDisplay">0</div>
+      <div class="calc-grid">
+        <button class="op" data-action="clear">C</button>
+        <button class="op" data-action="sign">±</button>
+        <button class="op" data-action="percent">%</button>
+        <button class="op" data-value="/">÷</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button class="op" data-value="*">×</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button class="op" data-value="-">−</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button class="op" data-value="+">+</button>
+
+        <button class="wide" data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button class="equals" data-action="equals">=</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Alexandra Nicole J. Nucos · 2026</span>
+  <span>Portfolio</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

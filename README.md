@@ -2,10 +2,10 @@
 
 A simple personal portfolio site with four sections: Home, Profile, Contact, and a small Calculator project.
 
-Built with plain HTML, CSS, and JavaScript — no frameworks, no build step. Everything lives in one page (`index.html`); the tabs switch sections instantly without reloading.
+Built with plain HTML, CSS, and JavaScript — no frameworks, no build step. Everything lives in one page (`index (1).html`); the tabs switch sections instantly without reloading.
 
 ## Files
-- `index.html` — the whole site (Home / Profile / Contact / Calculator)
+- `index (1).html` — the whole site (Home / Profile / Contact / Calculator)
 - `style.css` — all styling
 - `script.js` — tab switching + calculator logic
 - `alexandra.jpg` — profile photo
